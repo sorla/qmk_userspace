@@ -1,0 +1,119 @@
+// COMB|SUBS(name,  result,  keys)
+
+//#include "simple_eng.def"
+//#include "tech_words.def"
+//#include "punctuation.def"
+//#include "frogpad.def"
+//#include "nav_combos.def"
+
+// Home row left hand backspace word and delete
+COMB(BSPSS_CBSP, C(KC_BSPC), KC_BSPC, KC_S)
+COMB(BSPST_CDEL, C(KC_DEL), KC_BSPC, KC_T)
+// CAPS on right hand
+COMB(SPCI_CAPS, KC_CAPS, KC_J, KC_L)
+
+// Punctuation
+// Right hand
+COMB(UE_1, KC_1, KC_U, KC_E)
+COMB(LN_3, KC_3, KC_L, KC_N)
+COMB(NH_5, KC_5, KC_N, KC_H)
+COMB(YI_7, KC_7, KC_Y, KC_I)
+COMB(OQUOT_9, KC_9, KC_O, KC_QUOT)
+
+COMB(UY_RBRC, KC_RBRC, KC_U, KC_Y)
+COMB(LU_TAB, KC_TAB, KC_L, KC_U)
+COMB(ECOMM_RPRN, KC_RPRN, KC_E, KC_COMM)
+COMB(IDOT_MINS, KC_MINS, KC_I, KC_DOT)
+COMB(OSLSH_GRV, KC_GRV, KC_O, KC_SLSH)
+COMB(COMMDOT_SCLN, KC_SCLN, KC_COMM, KC_DOT)
+COMB(HCOMM_HASH, UK_HASH, KC_H, KC_COMM)
+
+// Left hand
+COMB(QW_LGUI, KC_LGUI, KC_Q, KC_W)
+COMB(TG_NAV, KC_SPC, KC_T, KC_G)
+COMB(CD_FUN, KC_S, KC_C, KC_D)
+COMB(XC_MOUS, OS_ALT, KC_X, KC_C)
+
+COMB(PT_0, KC_0, KC_P, KC_T)
+COMB(FS_2, KC_2, KC_F, KC_S)
+COMB(TD_4, KC_4, KC_T, KC_D)
+COMB(WR_6, KC_6, KC_W, KC_R)
+COMB(AQ_8, KC_8, KC_A, KC_Q)
+
+COMB(WF_LBRC, KC_LBRC, KC_W, KC_F)
+COMB(FP_DEL,  KC_DEL,  KC_F, KC_P)
+COMB(AZ_BSLS, UK_BSLS, KC_A, KC_Z)
+COMB(RX_EQL, KC_EQL, KC_R, KC_X)
+COMB(SC_LPRN, KC_LPRN, KC_S, KC_C)
+COMB(ZX_BSLS, UK_BSLS, KC_Z, KC_X)
+
+// Num layer
+COMB(O2_MINS, KC_MINS, KC_1, KC_2)
+COMB(O3_COLN, KC_COLN, KC_1, KC_3)
+
+// Common words put on chords on the base layer
+// Space + Left hand
+SUBS(SPCA_are, "are ", SPC_NUM, KC_A)
+SUBS(SPCR_was, "was ", SPC_NUM, KC_R)
+SUBS(SPCS_of, "of ", SPC_NUM, KC_S)
+SUBS(SPCT_the, "the ", SPC_NUM, KC_T)
+SUBS(SPCG_were, "were ", SPC_NUM, KC_G)
+
+SUBS(SPCQ_will, "will ", SPC_NUM, KC_Q)
+SUBS(SPCW_with, "with ", SPC_NUM, KC_W)
+SUBS(SPCF_for, "for ", SPC_NUM, KC_F)
+SUBS(SPCP_to, "to ", SPC_NUM, KC_P)
+SUBS(SPCT_because, "because ", SPC_NUM, KC_B)
+
+SUBS(SPCZ_those, "those ", SPC_NUM, KC_Z)
+SUBS(SPCX_these, "these ", SPC_NUM, KC_X)
+SUBS(SPCC_this, "this ", SPC_NUM, KC_C)
+SUBS(SPCD_that, "that ", SPC_NUM, KC_D)
+SUBS(SPCV_differen, "differen", SPC_NUM, KC_V)
+
+SUBS(SPCTG_temp, "temperature ", SPC_NUM, KC_T, KC_G)
+SUBS(SPCWR_between, "between ", SPC_NUM, KC_W, KC_R)
+SUBS(SPCRX_extru, "extru", SPC_NUM, KC_X, KC_R)
+SUBS(SPCFS_well, "well ", SPC_NUM, KC_F, KC_S)
+SUBS(SPCTP_they, "they ", SPC_NUM, KC_T, KC_P)
+SUBS(SPCfp_them, "them ", SPC_NUM, KC_F, KC_P)
+SUBS(SPCTD_than, "than ", SPC_NUM, KC_T, KC_D)
+
+SUBS(SPCAR_how, "how ", SPC_NUM, KC_A, KC_R)
+SUBS(SPCST_then, "then ", SPC_NUM, KC_S, KC_T)
+SUBS(SPC_SC, "what ", SPC_NUM, KC_S, KC_C)
+SUBS(SPC_RX, "why", SPC_NUM, KC_R, KC_S)
+
+// Space + Right hand
+SUBS(SPCM_ment, "ment ", SPC_NUM, KC_M)
+SUBS(SPCN_ing, "ing ", SPC_NUM, KC_N)
+SUBS(SPCE, "ould ", SPC_NUM, KC_E)
+SUBS(SPCI_tion, "tion ", SPC_NUM, KC_I)
+SUBS(SPCO_nt, "n't ", SPC_NUM, KC_O)
+SUBS(SPCEU, "ough ", SPC_NUM, KC_E, KC_U)
+SUBS(SPCIY, "ight ", SPC_NUM, KC_I, KC_Y)
+
+// Bsp + Right Hand
+SUBS(BSPN_and, "and ", KC_BSPC, KC_N)
+SUBS(BSPE_in, "in ", KC_BSPC, KC_E)
+SUBS(BSPI_by, "by ", KC_BSPC, KC_I)
+SUBS(BSPO_be, "be ", KC_BSPC, KC_O)
+SUBS(BSPL_from, "from ", KC_BSPC, KC_L)
+SUBS(BSPU_but, "but ", KC_BSPC, KC_U)
+SUBS(BSPY_you, "you ", KC_BSPC, KC_Y)
+SUBS(BSPQUOT_ould, "ould ", KC_BSPC, KC_QUOT)
+SUBS(BSPH_have, "have ", KC_BSPC, KC_H)
+SUBS(BSPCOMM_has, "has ", KC_BSPC, KC_COMM)
+SUBS(BSPCOMM_had, "had ", KC_BSPC, KC_DOT)
+SUBS(BSPM_here, "here ", KC_BSPC, KC_M)
+SUBS(BSPK_our, "our ", KC_BSPC, KC_K)
+SUBS(BSPNH_not, "not ", KC_BSPC, KC_N, KC_H)
+SUBS(BSPJL_project, "project ", KC_BSPC, KC_J, KC_L)
+SUBS(BSPNM_example, "example ", KC_BSPC, KC_N, KC_M)
+SUBS(BSPIO_been, "been ", KC_BSPC, KC_I, KC_O)
+SUBS(BSPNL_just, "just ", KC_BSPC, KC_J)
+SUBS(BSPCHCOMM_, "having ", KC_BSPC, KC_H, KC_COMM)
+SUBS(BSPC_LN, "please ", KC_BSPC, KC_N, KC_E)
+SUBS(BSPC_EU, "thanks ", KC_BSPC, KC_E, KC_I)
+SUBS(BSPC_ECOMM, "when ", KC_BSPC, KC_E, KC_COMM)
+SUBS(BSPC_IDOT, "which ", KC_BSPC, KC_I, KC_DOT)

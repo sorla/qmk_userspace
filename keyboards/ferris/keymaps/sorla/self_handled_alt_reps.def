@@ -1,0 +1,14 @@
+        case SW_OF: return SW_OF;
+        case SW_ARE: return SW_ARE;
+        case SW_WITH: return SW_WITH;
+        case SW_BECAUSE: return SW_BECAUSE;
+        case SW_DIFFEREN: return SW_DIFFEREN;
+        case SW_EXTRU: return SW_EXTRU;
+        case SW_HERE: return SW_HERE;
+        case SW_IN: return SW_IN;
+        case SW_HIGH: return SW_HIGH;
+        case SW_LOW: return SW_LOW;
+        case SW_SILICON: return SW_SILICON;
+        case SW_OULD: return SW_OULD;
+        case SW_CONDUCT: return SW_CONDUCT;
+        case SW_RESIST: return SW_RESIST;
