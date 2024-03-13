@@ -1,0 +1,145 @@
+// Layer controls
+// From HOME
+COMB(NM_MATHS, GO_MATH, N_NUM, KC_M)
+COMB(BSPCESC_FUNC, MO_FUN, BSP_SFT, ESC_ALT)
+
+// From MATHS to NAV
+COMB(G0_GO_NAV, GO_NAV, KC_G, KC_0)
+
+// From NAV to MATHS
+COMB(PSCRLEFT_GO_MATHS, GO_MATH, KC_PSCR, KC_LEFT)
+
+// Home row left hand backspace word and delete
+COMB(BSPSS_CBSP, C(KC_BSPC), BSP_SFT, S_CTL)
+COMB(BSPST_CDEL, C(KC_DEL), BSP_SFT, T_NAV)
+// CAPS on right hand
+COMB(SPCI_CAPS, KC_CAPS, KC_J, KC_L)
+
+// Punctuation
+// Right hand
+COMB(UE_1, KC_1, KC_U, E_CTL)
+COMB(LN_3, KC_3, KC_L, N_NUM)
+COMB(NH_5, KC_5, N_NUM, H_FUN)
+COMB(YI_7, KC_7, KC_Y, I_ALT)
+COMB(OQUOT_9, KC_9, O_GUI, KC_QUOT)
+
+COMB(UY_RBRC, KC_RBRC, KC_U, KC_Y)
+COMB(LU_TAB, KC_TAB, KC_L, KC_U)
+COMB(ECOMM_RPRN, KC_RPRN, E_CTL, CM_RALT)
+COMB(IDOT_MINS, KC_MINS, I_ALT, KC_DOT)
+COMB(OSLSH_GRV, KC_GRV, O_GUI, KC_SLSH)
+COMB(COMMDOT_SCLN, KC_SCLN, CM_RALT, KC_DOT)
+COMB(HCOMM_HASH, UK_HASH, H_FUN, CM_RALT)
+
+// Left hand
+COMB(QW_LGUI, KC_LGUI, KC_Q, KC_W)
+COMB(TG_NAV, KC_SPC, T_NAV, KC_G)
+COMB(CD_FUN, OS_CTL, C_RALT, D_MOUS)
+COMB(XC_MOUS, OS_ALT, KC_X, C_RALT)
+
+COMB(PT_0, KC_0, KC_P, T_NAV)
+COMB(FS_2, KC_2, KC_F, S_CTL)
+COMB(TD_4, KC_4, T_NAV, D_MOUS)
+COMB(WR_6, KC_6, KC_W, R_ALT)
+COMB(AQ_8, KC_8, A_GUI, KC_Q)
+
+COMB(WF_LBRC, KC_LBRC, KC_W, KC_F)
+COMB(FP_DEL,  KC_DEL,  KC_F, KC_P)
+COMB(AZ_BSLS, UK_BSLS, A_GUI, KC_Z)
+COMB(RX_EQL, KC_EQL, R_ALT, KC_X)
+COMB(SC_LPRN, KC_LPRN, S_CTL, C_RALT)
+COMB(ZX_BSLS, TO_LHNAV, KC_Z, KC_X)
+
+// Num layer
+COMB(O2_MINS, KC_MINS, KC_1, KC_2)
+COMB(O3_COLN, KC_COLN, KC_1, KC_3)
+
+// Punctuation with one shot shift...
+COMB(BSPSPC_CAP , STP_CAP, BSP_SFT, SPC_CTL)
+
+// Common words put on chords on the base layer
+// Space + Left hand
+SUBS(SPCA_are, "are ", SPC_CTL, A_GUI)
+SUBS(SPCR_was, "was ", SPC_CTL, R_ALT)
+SUBS(SPCS_of, "of ", SPC_CTL, S_CTL)
+COMB(spct_THE, WS_THE, SPC_CTL, T_NAV)
+//SUBS(SPCT_the, "the ", SPC_CTL, T_NAV)
+SUBS(SPCG_were, "were ", SPC_CTL, KC_G)
+
+SUBS(SPCQ_will, "will ", SPC_CTL, KC_Q)
+SUBS(SPCW_with, "with ", SPC_CTL, KC_W)
+SUBS(SPCF_for, "for ", SPC_CTL, KC_F)
+SUBS(SPCP_to, "to ", SPC_CTL, KC_P)
+SUBS(SPCT_because, "because ", SPC_CTL, KC_B)
+
+SUBS(SPCZ_those, "those ", SPC_CTL, KC_Z)
+SUBS(SPCX_these, "these ", SPC_CTL, KC_X)
+SUBS(SPCC_this, "this ", SPC_CTL, C_RALT)
+SUBS(SPCD_that, "that ", SPC_CTL, D_MOUS)
+SUBS(SPCV_differen, "differen", SPC_CTL, KC_V)
+
+SUBS(SPCTG_temp, "temperature ", SPC_CTL, T_NAV, KC_G)
+SUBS(SPCWR_between, "between ", SPC_CTL, KC_W, R_ALT)
+SUBS(SPCRX_extru, "extru", SPC_CTL, KC_X, R_ALT)
+SUBS(SPCFS_well, "well ", SPC_CTL, KC_F, S_CTL)
+SUBS(SPCTP_they, "they", SPC_CTL, T_NAV, KC_P)
+SUBS(SPCTD_than, "than ", SPC_CTL, T_NAV, D_MOUS)
+
+SUBS(SPCAR_how, "how ", SPC_CTL, A_GUI, R_ALT)
+SUBS(SPCST_then, "then ", SPC_CTL, S_CTL, T_NAV)
+SUBS(SPC_SC, "what ", SPC_CTL, S_CTL, C_RALT)
+SUBS(SPC_RX, "why", SPC_CTL, R_ALT, S_CTL)
+
+// Space + Right hand
+SUBS(SPCM_ment, "ment ", SPC_CTL, KC_M)
+SUBS(SPCN_ing, "ing ", SPC_CTL, N_NUM)
+SUBS(SPCE, "ould ", SPC_CTL, E_CTL)
+SUBS(SPCI_tion, "tion ", SPC_CTL, I_ALT)
+SUBS(SPCO_nt, "n't ", SPC_CTL, O_GUI)
+SUBS(SPCEU, "ough ", SPC_CTL, E_CTL, KC_U)
+SUBS(SPCIY, "ight ", SPC_CTL, I_ALT, KC_Y)
+
+// Bsp + Right Hand
+SUBS(BSPN_and, "and ", BSP_SFT, N_NUM)
+SUBS(BSPE_in, "in ", BSP_SFT, E_CTL)
+SUBS(BSPI_by, "by ", BSP_SFT, I_ALT)
+SUBS(BSPO_be, "be ", BSP_SFT, O_GUI)
+SUBS(BSPL_from, "from ", BSP_SFT, KC_L)
+SUBS(BSPU_but, "but ", BSP_SFT, KC_U)
+SUBS(BSPY_you, "you ", BSP_SFT, KC_Y)
+SUBS(BSPQUOT_ould, "ould ", BSP_SFT, KC_QUOT)
+SUBS(BSPH_have, "have ", BSP_SFT, H_FUN)
+SUBS(BSPCOMM_has, "has ", BSP_SFT, CM_RALT)
+SUBS(BSPCOMM_had, "had ", BSP_SFT, KC_DOT)
+SUBS(BSPM_here, "here ", BSP_SFT, KC_M)
+SUBS(BSPK_our, "our ", BSP_SFT, KC_K)
+SUBS(BSPJ_please, "please ", BSP_SFT, KC_J)
+SUBS(BSPNH_not, "not ", BSP_SFT, N_NUM, H_FUN)
+SUBS(BSPJL_project, "project ", BSP_SFT, KC_J, KC_L)
+SUBS(BSPNM_example, "example ", BSP_SFT, N_NUM, KC_M)
+SUBS(BSPIO_been, "been ", BSP_SFT, I_ALT, O_GUI)
+SUBS(BSPNL_just, "just ", BSP_SFT, KC_J)
+SUBS(BSPEY_able, "able ", BSP_SFT, E_CTL, KC_U)
+SUBS(BSPCHCOMM_, "having ", BSP_SFT, H_FUN, CM_RALT)
+SUBS(BSPC_LN, "please ", BSP_SFT, KC_L, N_NUM)
+SUBS(BSPC_EU, "thanks ", BSP_SFT, KC_U, E_CTL)
+SUBS(BSPC_ECOMM, "when ", BSP_SFT, E_CTL, CM_RALT)
+SUBS(BSPC_IDOT, "which ", BSP_SFT, I_ALT, KC_DOT)
+
+
+// Bsp & Left hand (Teams and things)
+COMB(BSPT_M, RCS(KC_M), BSP_SFT, T_NAV) //mute
+COMB(BSPG_K, RCS(KC_K), BSP_SFT, KC_G) //hand
+COMB(BSPD_H, RCS(H_FUN), BSP_SFT, D_MOUS) //hangup
+
+
+/* Turning these off, but will redefine on new non-homerow things that are often triggered
+SUBS(IS_is , "is ", I_ALT, S_CTL)
+SUBS(ON_on , "on ", N_NUM, O_GUI)
+SUBS(AT_at , "at ", T_NAV, A_GUI)
+SUBS(IT_it , "it ", T_NAV, I_ALT)
+SUBS(AS_as , "as ", A_GUI, S_CTL) // 0.6% or so
+*/
+// Once these are all ok, adding some work related words and programming symbols (return, each, import, class and any finicky punctuation) will be nice
+COMB(ctl89, OS_CTL, KC_9, KC_8)
+COMB(alt9dot, OS_ALT, KC_9, KC_DOT)
