@@ -27,7 +27,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             set_mods(temp_mod);
         }
         break;
-    #include "wordcases.def"
+
+    #ifdef REPEAT_KEY_ENABLED
+      #include "wordcases.def"
+    #endif
 
   }
   return process_record_keymap(keycode, record);

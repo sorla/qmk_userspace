@@ -1,3 +1,6 @@
+LTO_ENABLE = yes
+NKRO_ENABLE = yes
+
 COMBO_ENABLE = no
 MOUSEKEY_ENABLE = no
 
