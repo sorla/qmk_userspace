@@ -12,6 +12,8 @@
 #define OS_GUI OSM(MOD_LGUI)
 #define OS_RAL OSM(MOD_RALT)
 
+#define RESET QK_BOOT
+
 // Set up for alt-tab macro
 bool is_alt_tab_active = false;
 uint16_t alt_tab_timer = 0;
