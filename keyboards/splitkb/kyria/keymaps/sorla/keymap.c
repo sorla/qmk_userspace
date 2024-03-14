@@ -19,7 +19,7 @@ uint8_t mod_state;
 // #include "sorla_autoshift.h"
 
 // #ifdef COMBOS_ENABLED
-//     #include "g/keymap_combo.h"
+#include "g/keymap_combo.h"
 // #endif
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -248,29 +248,10 @@ bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
 }
 
 
- bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
-            if (!record->event.pressed) {
-            uint8_t temp_mod = get_mods();
-            uint8_t temp_osm = get_oneshot_mods();
-            clear_mods(); clear_oneshot_mods();
-            SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP);
-    #ifndef FLASH_BOOTLOADER
-            if ((temp_mod | temp_osm) & MOD_MASK_SHIFT)
-    #endif
-            {
-                SEND_STRING(":flash");
-            }
-            if ((temp_mod | temp_osm) & MOD_MASK_CTRL) {
-                SEND_STRING(" -j8 --output-sync");
-            }
-            tap_code(KC_ENT);
-            set_mods(temp_mod);
-        }
-        break;
-    // #ifdef REPEAT_KEY_ENABLED
-    #include "wordcases.def"
-    // #endif
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//   switch (keycode) {
+//     // #ifdef REPEAT_KEY_ENABLED
+//     #include "wordcases.def"
+//     // #endif
 
-}
+// }

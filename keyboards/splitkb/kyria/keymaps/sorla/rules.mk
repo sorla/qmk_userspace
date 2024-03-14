@@ -12,5 +12,5 @@ MOUSEKEY_ENABLE = yes
 ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 
-COMBO_ENABLE = false
-//VPATH += keyboards/gboards
+COMBO_ENABLE = true
+VPATH += keyboards/gboards
