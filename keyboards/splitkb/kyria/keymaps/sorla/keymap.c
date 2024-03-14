@@ -24,13 +24,13 @@ enum layers {
     _WORDS
 };
 
-enum custom_keycodes {
-    ALTREP2 = SAFE_RANGE,
-    ALTREP3,
-#include "enumfile.def"
-};
+// enum custom_keycodes {
+//     ALTREP2 = SAFE_RANGE,
+//     ALTREP3,
+// #include "enumfile.def"
+// };
 
-#include "keymap_sorla.h"
+#include "sorla.c"
 #include "g/keymap_combo.h"
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -134,24 +134,6 @@ if (record->event.pressed) {SEND_STRING(word);} else {} break;
 //     return KC_TRNS;
 // }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        // case ALTREP2:
-        //     if (record->event.pressed) {
-        //         process_altrep2(get_last_keycode(), get_last_mods());
-        //     }
-        //     return false;
-
-        // case ALTREP3:
-        //     if (record->event.pressed) {
-        //         process_altrep3(get_last_keycode(), get_last_mods());
-        //     }
-        //     return false;
-
-#include "wordcases.def"
-    }
-    return true;
-};
 
 // Tri-layer state as a possible future addition.
 // layer_state_t layer_state_set_user(layer_state_t state) {

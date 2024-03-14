@@ -1,5 +1,5 @@
 OLED_ENABLE = yes
-OLED_DRIVER = SSD1306      # Enables the use of OLED displays
+OLED_DRIVER = ssd1306      # Enables the use of OLED displays
 
 REPEAT_KEY_ENABLE = yes
 CAPS_WORD_ENABLE = yes
