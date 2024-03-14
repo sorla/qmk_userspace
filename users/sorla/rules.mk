@@ -1,5 +1,6 @@
 SRC += sorla.c
 SRC += combos.def
+
 COMBO_ENABLE = yes
 AUTO_SHIFT_ENABLE = yes
 
@@ -11,4 +12,7 @@ ifeq ($(strip $(REPEAT_KEY_ENABLE)), yes)
 endif
 ifeq ($(strip $(MACROS_ENABLED)), yes)
     OPT_DEFS += -DMACROS_ENABLED
+endif
+ifeq ($(strip $(COMBO_ENABLE)), yes)
+    OPT_DEFS += -DCOMBOS_ENABLED
 endif

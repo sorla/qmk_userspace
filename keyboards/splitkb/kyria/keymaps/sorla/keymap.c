@@ -15,14 +15,6 @@
  */
 #include QMK_KEYBOARD_H
 uint8_t mod_state;
-enum layers {
-    _BASE=0,
-    _NAV,
-    _SYM,
-    _FUNCTION,
-    _ADJUST,
-    _WORDS
-};
 
 // enum custom_keycodes {
 //     ALTREP2 = SAFE_RANGE,

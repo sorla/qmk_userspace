@@ -3,6 +3,15 @@
 #include "keymap_uk.h"
 // clang-format off
 
+enum layers {
+    _BASE=0,
+    _NAV,
+    _SYM,
+    _FUNCTION,
+    _ADJUST,
+    _WORDS
+};
+
 // Aliases
 #define	SO_ESC	LT(_NAV, KC_ESC)
 #define	SO_BSPC	KC_BSPC

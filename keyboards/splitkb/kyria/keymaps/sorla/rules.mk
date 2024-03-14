@@ -11,4 +11,5 @@ ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 
 COMBO_ENABLE = yes
-VPATH += keyboards/gboards
+//VPATH += keyboards/gboards
+MACROS_ENABLED = yes
