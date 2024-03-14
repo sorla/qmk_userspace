@@ -1,8 +1,5 @@
 SRC += sorla.c
-SRC += combos.def
-
-COMBO_ENABLE = yes
-AUTO_SHIFT_ENABLE = yes
+# SRC += combos.def
 
 VPATH += keyboards/gboards
 
@@ -15,4 +12,7 @@ ifeq ($(strip $(MACROS_ENABLED)), yes)
 endif
 ifeq ($(strip $(COMBO_ENABLE)), yes)
     OPT_DEFS += -DCOMBOS_ENABLED
+endif
+ifeq ($(strip $(AUTO_SHIFT_ENABLE)), yes)
+    OPT_DEFS += -DAUTO_SHIFT_ENABLED
 endif

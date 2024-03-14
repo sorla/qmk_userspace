@@ -14,16 +14,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#include "sorla.h"
 uint8_t mod_state;
+// #include "sorla_autoshift.h"
 
-// enum custom_keycodes {
-//     ALTREP2 = SAFE_RANGE,
-//     ALTREP3,
-// #include "enumfile.def"
-// };
-
-#include "sorla.c"
-#include "g/keymap_combo.h"
+// #ifdef COMBOS_ENABLED
+//     #include "g/keymap_combo.h"
+// #endif
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -85,8 +82,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_ADJUST]   = { ENCODER_CCW_CW(KC_MRWD, KC_MFFD), ENCODER_CCW_CW(KC_BRID, KC_BRIU) },
     [_WORDS]    = { ENCODER_CCW_CW(KC_MPRV, KC_MNXT), ENCODER_CCW_CW(KC_WH_L, KC_WH_R) },
 };
-#define SOW(word) case keyname:\
-if (record->event.pressed) {SEND_STRING(word);} else {} break;
 
 // bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
 //                             uint8_t* remembered_mods) {
@@ -214,3 +209,68 @@ bool oled_task_user(void) {
     return false;
 }
 
+bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
+    switch(keycode) {
+        case SO_Z:
+        case SO_X:
+        case SO_C:
+        case SO_D:
+        case SO_V:
+        case SO_K:
+        case SO_H:
+        case SO_COMM:
+        case SO_DOT:
+        case SO_SLSH:
+        case SO_A:
+        case SO_R:
+        case SO_S:
+        case SO_T:
+        case SO_G:
+        case SO_M:
+        case SO_N:
+        case SO_E:
+        case SO_I:
+        case SO_O:
+        case SO_Q:
+        case SO_W:
+        case SO_F:
+        case SO_P:
+        case SO_B:
+        case SO_J:
+        case SO_L:
+        case SO_U:
+        case SO_Y:
+        case SO_QUOT:
+            return true;
+        default:
+            return false;
+    }
+}
+
+
+ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case KC_MAKE:  // Compiles the firmware, and adds the flash command based on keyboard bootloader
+            if (!record->event.pressed) {
+            uint8_t temp_mod = get_mods();
+            uint8_t temp_osm = get_oneshot_mods();
+            clear_mods(); clear_oneshot_mods();
+            SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP);
+    #ifndef FLASH_BOOTLOADER
+            if ((temp_mod | temp_osm) & MOD_MASK_SHIFT)
+    #endif
+            {
+                SEND_STRING(":flash");
+            }
+            if ((temp_mod | temp_osm) & MOD_MASK_CTRL) {
+                SEND_STRING(" -j8 --output-sync");
+            }
+            tap_code(KC_ENT);
+            set_mods(temp_mod);
+        }
+        break;
+    // #ifdef REPEAT_KEY_ENABLED
+    #include "wordcases.def"
+    // #endif
+
+}

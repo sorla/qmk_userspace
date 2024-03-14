@@ -1,4 +1,4 @@
-case SW_THE:if (record->event.pressed){SEND_STRING("the ");}break;
+case SW_THE:if (record->event.pressed){SEND_STRING("the ");}return false;
 case SW_AND:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -113,8 +113,8 @@ case SW_WERE:
         }
     }
     return false;
-case SW_THOSE:if (record->event.pressed){SEND_STRING("those ");}break;
-case SW_THESE:if (record->event.pressed){SEND_STRING("these ");}break;
+case SW_THOSE:if (record->event.pressed){SEND_STRING("those ");}return false;
+case SW_THESE:if (record->event.pressed){SEND_STRING("these ");}return false;
 case SW_THIS:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -166,7 +166,7 @@ case SW_WELL:
         }
     }
     return false;
-case SW_THEY:if (record->event.pressed){SEND_STRING("they ");}break;
+case SW_THEY:if (record->event.pressed){SEND_STRING("they ");}return false;
 case SW_THAN:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -311,7 +311,7 @@ case SW_BE:
         }
     }
     return false;
-case SW_OUR:if (record->event.pressed){SEND_STRING("our ");}break;
+case SW_OUR:if (record->event.pressed){SEND_STRING("our ");}return false;
 case SW_HAVE:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -384,7 +384,7 @@ case SW_THANKS:
         }
     }
     return false;
-case SW_PLEASE:if (record->event.pressed){SEND_STRING("please ");}break;
+case SW_PLEASE:if (record->event.pressed){SEND_STRING("please ");}return false;
 case SW_BEEN:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -394,16 +394,16 @@ case SW_BEEN:
         }
     }
     return false;
-case SW_IMPORT:if (record->event.pressed){SEND_STRING("import ");}break;
-case SW_PRINT:if (record->event.pressed){SEND_STRING("print");}break;
-case SW_FSTR:if (record->event.pressed){SEND_STRING("(f\"");}break;
-case SW_NEXT:if (record->event.pressed){SEND_STRING("next ");}break;
-case SW_PREVIOUS:if (record->event.pressed){SEND_STRING("previous ");}break;
-case SW_LAST:if (record->event.pressed){SEND_STRING("last ");}break;
-case SW_BEFORE:if (record->event.pressed){SEND_STRING("before ");}break;
-case SW_AFTER:if (record->event.pressed){SEND_STRING("after ");}break;
-case SW_FURNACE:if (record->event.pressed){SEND_STRING("furnace ");}break;
-case SW_TEMPERATURE:if (record->event.pressed){SEND_STRING("temperature ");}break;
+case SW_IMPORT:if (record->event.pressed){SEND_STRING("import ");}return false;
+case SW_PRINT:if (record->event.pressed){SEND_STRING("print");}return false;
+case SW_FSTR:if (record->event.pressed){SEND_STRING("(f\"");}return false;
+case SW_NEXT:if (record->event.pressed){SEND_STRING("next ");}return false;
+case SW_PREVIOUS:if (record->event.pressed){SEND_STRING("previous ");}return false;
+case SW_LAST:if (record->event.pressed){SEND_STRING("last ");}return false;
+case SW_BEFORE:if (record->event.pressed){SEND_STRING("before ");}return false;
+case SW_AFTER:if (record->event.pressed){SEND_STRING("after ");}return false;
+case SW_FURNACE:if (record->event.pressed){SEND_STRING("furnace ");}return false;
+case SW_TEMPERATURE:if (record->event.pressed){SEND_STRING("temperature ");}return false;
 case SW_HIGH:
     if (get_repeat_key_count() > 0) {        // Repeating.
         if (record->event.pressed) {
@@ -434,14 +434,14 @@ case SW_LOW:
         }
     }
     return false;
-case SW_CASE:if (record->event.pressed){SEND_STRING("case ");}break;
-case SW_TRIAL:if (record->event.pressed){SEND_STRING("trial ");}break;
-case SW_SAMPLE:if (record->event.pressed){SEND_STRING("sample ");}break;
-case SW_PROBABILITY:if (record->event.pressed){SEND_STRING("probability ");}break;
-case SW_LIKELIHOOD:if (record->event.pressed){SEND_STRING("likelihood ");}break;
-case SW_ENUMERATE:if (record->event.pressed){SEND_STRING("enumerate ");}break;
-case SW_LIST:if (record->event.pressed){SEND_STRING("list");}break;
-case SW_DEF:if (record->event.pressed){SEND_STRING("def ");}break;
+case SW_CASE:if (record->event.pressed){SEND_STRING("case ");}return false;
+case SW_TRIAL:if (record->event.pressed){SEND_STRING("trial ");}return false;
+case SW_SAMPLE:if (record->event.pressed){SEND_STRING("sample ");}return false;
+case SW_PROBABILITY:if (record->event.pressed){SEND_STRING("probability ");}return false;
+case SW_LIKELIHOOD:if (record->event.pressed){SEND_STRING("likelihood ");}return false;
+case SW_ENUMERATE:if (record->event.pressed){SEND_STRING("enumerate ");}return false;
+case SW_LIST:if (record->event.pressed){SEND_STRING("list");}return false;
+case SW_DEF:if (record->event.pressed){SEND_STRING("def ");}return false;
 case SW_SILICON:
     if (get_repeat_key_count() > 0) {        // Repeating.
         if (record->event.pressed) {
@@ -457,14 +457,14 @@ case SW_SILICON:
         }
     }
     return false;
-case SW_MKMYR:if (record->event.pressed){SEND_STRING("qmk compile -kb splitkb/kyria -km sorla");}break;
-case SW_MKFER:if (record->event.pressed){SEND_STRING("qmk compile -kb ferris -km sorla");}break;
-case SW_RANDOM:if (record->event.pressed){SEND_STRING("random");}break;
-case SW_DISTRIBUTION:if (record->event.pressed){SEND_STRING("distribution ");}break;
-case SW_ELEMENT:if (record->event.pressed){SEND_STRING("element ");}break;
-case SW_HZ:if (record->event.pressed){SEND_STRING("hot zone ");}break;
-case SW_EMH:if (record->event.pressed){SEND_STRING("alan.bloomer@gmail.com");}break;
-case SW_EMW:if (record->event.pressed){SEND_STRING("alan.bloomer@kanthal.com");}break;
+case SW_MKMYR:if (record->event.pressed){SEND_STRING("qmk compile -kb splitkb/kyria -km sorla");}return false;
+case SW_MKFER:if (record->event.pressed){SEND_STRING("qmk compile -kb ferris -km sorla");}return false;
+case SW_RANDOM:if (record->event.pressed){SEND_STRING("random");}return false;
+case SW_DISTRIBUTION:if (record->event.pressed){SEND_STRING("distribution ");}return false;
+case SW_ELEMENT:if (record->event.pressed){SEND_STRING("element ");}return false;
+case SW_HZ:if (record->event.pressed){SEND_STRING("hot zone ");}return false;
+case SW_EMH:if (record->event.pressed){SEND_STRING("alan.bloomer@gmail.com");}return false;
+case SW_EMW:if (record->event.pressed){SEND_STRING("alan.bloomer@kanthal.com");}return false;
 case SW_RESIST:
     if (get_repeat_key_count() > 0) {        // Repeating.
         if (record->event.pressed) {
@@ -504,7 +504,7 @@ case SW_EXP:
         }
     }
     return false;
-case SW_MEASURE:if (record->event.pressed){SEND_STRING("measure");}break;
+case SW_MEASURE:if (record->event.pressed){SEND_STRING("measure");}return false;
 case SW_CONTROL:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -514,7 +514,7 @@ case SW_CONTROL:
         }
     }
     return false;
-case SW_ING:if (record->event.pressed){SEND_STRING("ing ");}break;
+case SW_ING:if (record->event.pressed){SEND_STRING("ing ");}return false;
 case SW_OULD:
     if (get_repeat_key_count() > 0) {        // Repeating.
         if (record->event.pressed) {
@@ -530,12 +530,12 @@ case SW_OULD:
         }
     }
     return false;
-case SW_OUGH:if (record->event.pressed){SEND_STRING("ough ");}break;
-case SW_TION:if (record->event.pressed){SEND_STRING("tion ");}break;
-case SW_IGHT:if (record->event.pressed){SEND_STRING("ight ");}break;
-case SW_MENT:if (record->event.pressed){SEND_STRING("ment ");}break;
-case SW_N_T:if (record->event.pressed){SEND_STRING("n't ");}break;
-case SW_SQRT:if (record->event.pressed){SEND_STRING("sqrt");}break;
+case SW_OUGH:if (record->event.pressed){SEND_STRING("ough ");}return false;
+case SW_TION:if (record->event.pressed){SEND_STRING("tion ");}return false;
+case SW_IGHT:if (record->event.pressed){SEND_STRING("ight ");}return false;
+case SW_MENT:if (record->event.pressed){SEND_STRING("ment ");}return false;
+case SW_N_T:if (record->event.pressed){SEND_STRING("n't ");}return false;
+case SW_SQRT:if (record->event.pressed){SEND_STRING("sqrt");}return false;
 case SW_SIN:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -554,7 +554,7 @@ case SW_COS:
         }
     }
     return false;
-case SW_LOG:if (record->event.pressed){SEND_STRING("log(");}break;
+case SW_LOG:if (record->event.pressed){SEND_STRING("log(");}return false;
 case SW_TAN:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -564,8 +564,8 @@ case SW_TAN:
         }
     }
     return false;
-case SW_POW:if (record->event.pressed){SEND_STRING("**");}break;
-case SW_DEGC:if (record->event.pressed){SEND_STRING(SS_RALT("0")"C");}break;
+case SW_POW:if (record->event.pressed){SEND_STRING("**");}return false;
+case SW_DEGC:if (record->event.pressed){SEND_STRING(SS_RALT("0")"C");}return false;
 case SW_HAZARD:
     if (record->event.pressed) {
         if (get_repeat_key_count() > 0) {        // Repeating.
@@ -575,5 +575,5 @@ case SW_HAZARD:
         }
     }
     return false;
-case SW_CSV:if (record->event.pressed){SEND_STRING("csv");}break;
-case SW_TODO:if (record->event.pressed){SEND_STRING("todo");}break;
+case SW_CSV:if (record->event.pressed){SEND_STRING("csv");}return false;
+case SW_TODO:if (record->event.pressed){SEND_STRING("todo");}return false;

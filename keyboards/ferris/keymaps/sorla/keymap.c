@@ -13,24 +13,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include QMK_KEYBOARD_H
-
-enum layers {
-    _BASE=0,
-    _NAV,
-    _SYM,
-    _FUNCTION,
-    _ADJUST,
-    _WORDS
-};
-
-// enum custom_keycodes {
-//     ALTREP2 = SAFE_RANGE,
-//     ALTREP3,
-// #include "enumfile.def"
-// };
-
 #include "sorla.c"
+// #include QMK_KEYBOARD_H
+
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -85,11 +70,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //     ),
 };
 
-
-
-#define SOW(word) case keyname:\
-if (record->event.pressed) {SEND_STRING(word);} else {} break;
-
 // bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
 //                             uint8_t* remembered_mods) {
 //     switch (keycode) {
@@ -121,12 +101,12 @@ if (record->event.pressed) {SEND_STRING(word);} else {} break;
 //     }
 // }
 
-uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
-    switch (keycode) {
-#include "self_handled_alt_reps.def"
-    }
-    return KC_TRNS;
-}
+// uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
+//     switch (keycode) {
+// #include "self_handled_alt_reps.def"
+//     }
+//     return KC_TRNS;
+// }
 
 
 

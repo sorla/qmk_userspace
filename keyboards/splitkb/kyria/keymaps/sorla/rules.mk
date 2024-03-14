@@ -1,3 +1,5 @@
+CONVERT_TO=liatris
+
 OLED_ENABLE = yes
 OLED_DRIVER = ssd1306      # Enables the use of OLED displays
 
@@ -10,6 +12,5 @@ MOUSEKEY_ENABLE = yes
 ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 
-COMBO_ENABLE = yes
+COMBO_ENABLE = false
 //VPATH += keyboards/gboards
-MACROS_ENABLED = yes

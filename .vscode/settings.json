@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "*.def": "c"
+        "*.def": "c",
+        "sorla_autoshift.h": "c"
     }
 }
